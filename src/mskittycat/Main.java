@@ -215,9 +215,31 @@ public class Main {
 //        }
 
 
+        // Exercise
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Please pick your operator.\n" + "(+)\n" + "(-)\n" + "(*)\n" + "(/)");
+            String operator = scanner.next();
+            System.out.println("No.1");
+            int number1 = scanner.nextInt();
+            System.out.println("No.2");
+            int number2 = scanner.nextInt();
+            int result = 0;
 
+            switch (operator) {
+                default: result = 0;
+                case "+":  result = number1 + number2;break;
+                case "-": result = number1 - number2;break;
+                case "*": result = number1 * number2;break;
+                case "/": result = number1 / number2;break;
+                case "5": break;
+            }
+            System.out.println("Your result is " + number1 + " " + operator + " " + number2 + " = " + result);
+            System.out.println("Would you like to continue? y/n");
 
-
-
+            if (scanner.next().equals("n") || scanner.next().equals("N")) {
+                break;
+            }
+        }
     }
 }
